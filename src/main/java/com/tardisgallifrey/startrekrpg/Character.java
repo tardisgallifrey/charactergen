@@ -1,6 +1,11 @@
 package com.tardisgallifrey.startrekrpg;
 
+import com.tardisgallifrey.startrekrpg.enums.Era;
+
 public class Character {
+
+    private String era;
+    private String race;
 
     //Character Attributes
     private int control;
@@ -9,6 +14,10 @@ public class Character {
     private int insight;
     private int presence;
     private int reason;
+
+    public Character(Era era, String race){
+
+    }
 
     //Getters and Setters for Attributes
     public int getControl() {
