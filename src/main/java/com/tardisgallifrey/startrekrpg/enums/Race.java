@@ -45,19 +45,19 @@ public enum Race {
     XAHEAN("Xahean", Era.TOS),
     ZARANITE("Zaranite", Era.TOS),
     BAJORAN("Bajoran", Era.TNG),
-    BENZITE,
-    BYNAR,
-    CARDASSIAN,
-    CHANGELING,
-    DOOPLER,
-    HOLOGRAM,
-    JEM_HADAR,
-    KAZON,
-    LIBERATED_BORG,
-    LURIAN,
-    OCAMPA,
-    PAKLED,
-    PARADAN,
+    BENZITE("Benzite", Era.TNG),
+    BYNAR("Bynar", Era.TNG),
+    CARDASSIAN("Cardassian", Era.TNG),
+    CHANGELING("Changeling", Era.TNG),
+    DOOPLER("Doopler", Era.TNG),
+    HOLOGRAM("Hologram", Era.TNG),
+    JEM_HADAR("Jem'Hadar", Era.TNG),
+    KAZON("Kazon", Era.TNG),
+    LIBERATED_BORG("Liberated Borg", Era.TNG),
+    LURIAN("Lurian", Era.TNG),
+    OCAMPA("Ocampa", Era.TNG),
+    PAKLED("Pakled", Era.TNG),
+    PARADAN("Paradan", Era.TNG),
     SIKARIAN("Sikarian", Era.TNG),
     SOONG_ANDROID("Soong Type Android", Era.TNG),
     TALAXIAN("Talaxian", Era.TNG),
@@ -65,7 +65,7 @@ public enum Race {
     ZAKDORN("Zakdorn", Era.TNG);
 
     private static final Map<String, Race> BY_LABEL = new HashMap<>();
-    private static final Map<Integer, Race> BY_ERA = new HashMap<>();
+    private static final Map<Integer, Race> BY_ERA = new HashMap<Integer, Race>();
 
 
     static {
