@@ -33,6 +33,7 @@ public class StarTrekCharacterGen {
                 System.out.println();
                 player.setEra(true);
                 player.setRace(true);
+                input.close();
 
             }else{
                 System.out.println("Choose the Star Trek Era from the following:");
@@ -46,19 +47,24 @@ public class StarTrekCharacterGen {
                     System.out.println("You chose Era: " + era);
                     player.setEra(false);
                     player.setRace(false);
+                    //at every exit path,
+                    //I have to close the Scanner
+                    //try/catches have two exit paths each
+                    input.close();
 
 
                 }catch(Exception e){
                     System.out.println("Exception: " + e.toString());
+                    input.close();
                 }
             }
         }
         catch(Exception e){
             System.out.println("Exception: " + e.toString());
+            input.close();
         }
 
-        input.close();
-//        End of main function
+    //        End of main function
     }
 
 
