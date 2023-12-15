@@ -1,7 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public enum Race {
 
@@ -64,33 +63,25 @@ public enum Race {
     TAMARIAN("Tamarian", Era.TNG),
     ZAKDORN("Zakdorn", Era.TNG);
 
-    private static final Map<String, Race> BY_LABEL = new HashMap<>();
-    private static final Map<Integer, Race> BY_ERA = new HashMap<Integer, Race>();
 
-
-    static {
-        for (Race race : values()) {
-            BY_LABEL.put(race.label, race);
-            BY_ERA.put(race.era.ordinal(), race);
-        }
+    public String getLabel() {
+        return label;
     }
 
     public final String label;
+
+    public Era getEra() {
+        return era;
+    }
+
     public final Era era;
 
-    //constructor
-    private Race(String label, Era era) {
-        this.label = label;
-        this.era = era;
-    }
-
-    public static Race valueOfLabel(String label) {
-        return BY_LABEL.get(label);
-    }
-
-    public static Race valueOfEra(Era era) {
-        return BY_ERA.get(era);
-    }
+    //constructor, but cannot be instantiated.
+    //Is required because of enum fields
+   Race(String label, Era era){
+       this.label = label;
+       this.era = era;
+   }
 
 
 

@@ -1,11 +1,13 @@
 package com.tardisgallifrey.startrekrpg;
 
 import com.tardisgallifrey.startrekrpg.enums.Era;
+import com.tardisgallifrey.startrekrpg.enums.Race;
 
 public class Character {
 
-    private String era;
-    private String race;
+
+    private Era era;
+    private Race race;
 
     //Character Attributes
     private int control;
@@ -15,7 +17,19 @@ public class Character {
     private int presence;
     private int reason;
 
-    public Character(Era era, String race){
+    public Character(int control,
+                     int daring,
+                     int fitness,
+                     int insight,
+                     int presence,
+                     int reason){
+
+        this.control = control;
+        this.daring = daring;
+        this.fitness = fitness;
+        this.insight = insight;
+        this.presence = presence;
+        this.reason = reason;
 
     }
 
@@ -67,4 +81,21 @@ public class Character {
     public void setReason(int reason) {
         this.reason = reason;
     }
+
+    public Era getEra() {
+        return era;
+    }
+
+    public void setEra(boolean generate) {
+
+    }
+
+    public Race getRace() {
+        return race;
+    }
+
+    public void setRace(boolean generate) {
+
+    }
+
 }
