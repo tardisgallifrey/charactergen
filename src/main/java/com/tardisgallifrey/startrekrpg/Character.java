@@ -88,6 +88,7 @@ public class Character {
 
     public void setEra(boolean generate) {
 
+        //TODO create display and request
     }
 
     public Race getRace() {
@@ -95,6 +96,8 @@ public class Character {
     }
 
     public void setRace(boolean generate) {
+
+        //TODO create display and request
 
     }
 
