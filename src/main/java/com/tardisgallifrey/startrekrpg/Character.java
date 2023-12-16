@@ -26,12 +26,27 @@ public class Character {
     private int presence;
     private int reason;
 
+    //Character Disciplines
+    private int command;
+    private int conn;
+    private int engineering;
+    private int security;
+    private int science;
+    private int medicine;
+
+
     public Character(int control,
                      int daring,
                      int fitness,
                      int insight,
                      int presence,
-                     int reason){
+                     int reason,
+                     int command,
+                     int conn,
+                     int engineering,
+                     int security,
+                     int science,
+                     int medicine){
 
         this.control = control;
         this.daring = daring;
@@ -40,7 +55,12 @@ public class Character {
         this.presence = presence;
         this.reason = reason;
 
-        //TODO add discipline defaults
+        this.command = command;
+        this.conn = conn;
+        this.engineering = engineering;
+        this.security = security;
+        this.science = science;
+        this.medicine = medicine;
 
     }
 
@@ -91,6 +111,55 @@ public class Character {
 
     public void setReason(int reason) {
         this.reason = reason;
+    }
+
+
+    public int getCommand() {
+        return command;
+    }
+
+    public void setCommand(int command) {
+        this.command = command;
+    }
+
+    public int getConn() {
+        return conn;
+    }
+
+    public void setConn(int conn) {
+        this.conn = conn;
+    }
+
+    public int getEngineering() {
+        return engineering;
+    }
+
+    public void setEngineering(int engineering) {
+        this.engineering = engineering;
+    }
+
+    public int getSecurity() {
+        return security;
+    }
+
+    public void setSecurity(int security) {
+        this.security = security;
+    }
+
+    public int getScience() {
+        return science;
+    }
+
+    public void setScience(int science) {
+        this.science = science;
+    }
+
+    public int getMedicine() {
+        return medicine;
+    }
+
+    public void setMedicine(int medicine) {
+        this.medicine = medicine;
     }
 
 
