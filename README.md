@@ -9,6 +9,6 @@ I hope to change this to a web app via Spring Boot and Thymeleaf eventually.
 
 Apologies, but for now, it runs as a -jar app only.
 
-Also, the ability to have mixed race characters has not been realized.
+Also, the ability to have mixed species characters has not been realized.
 
 As always, use at your own risk.

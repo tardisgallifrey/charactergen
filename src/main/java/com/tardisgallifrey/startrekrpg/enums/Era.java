@@ -8,7 +8,11 @@ public enum Era {
     ENT_TOS("Enterprise & TOS"),
     TOS_TNG("TOS & TNG"),
     ENT_TNG("Enterprise & TNG"),
-    ALL("Race fits all Eras");
+    ALL("Species fits all Eras");
+
+    public String getLabel() {
+        return label;
+    }
 
     public final String label;
 

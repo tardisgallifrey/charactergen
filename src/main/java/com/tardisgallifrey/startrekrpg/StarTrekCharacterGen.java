@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg;
 
-import java.util.Scanner;
+import com.tardisgallifrey.startrekrpg.util.Menu;
 
 public class StarTrekCharacterGen {
     public static void main(String[] args) {
@@ -30,24 +30,9 @@ public class StarTrekCharacterGen {
         System.out.println("Welcome to the Star Trek Captain's Log Character Generator.");
         System.out.println("We will now begin your LifePath.");
         System.out.println("Do you wish to allow the generator to");
-        System.out.println("randomly pick Star Trek Era and Race?");
-        System.out.print("Enter Y or N --> ");
+        System.out.println("randomly pick Star Trek Era and Species?");
 
-        //Generally, I prefer all variables to be declared
-        //at beginning of method/function/class
-        //but for Scanners, I am deciding it's best
-        //to keep things close to the action.
-        Scanner input = new Scanner(System.in);
-        char choice = 'N';
-
-        //recommended method is to check
-        //and see if Scanner has what you want(i.e. no malfunctions)
-        //or to use try/catch.  I prefer this method.
-        if(input.hasNext()) {
-            choice = input.next().charAt(0);
-        }else{
-            System.out.println("Something went wrong.");
-        }
+        int choice = Menu.yes_no();
 
         //The crux of the matter
         //Intellij says this would be better with in if/then,
@@ -60,11 +45,13 @@ public class StarTrekCharacterGen {
             case 'y':
             case 'Y':
                 player.setEra(true);
-                player.setRace(true);
+                player.setSpecies(true);
+                player.showCharacter();
                 break;
             default:
                 player.setEra(false);
-                player.setRace(false);
+                player.setSpecies(false);
+                player.showCharacter();
         }
 
             //        End of main function
