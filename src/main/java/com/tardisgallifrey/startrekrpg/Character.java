@@ -1,9 +1,8 @@
 package com.tardisgallifrey.startrekrpg;
 
-import com.tardisgallifrey.startrekrpg.enums.Attr;
-import com.tardisgallifrey.startrekrpg.enums.Era;
-import com.tardisgallifrey.startrekrpg.enums.Species;
+import com.tardisgallifrey.startrekrpg.enums.*;
 import com.tardisgallifrey.startrekrpg.util.Dice;
+import com.tardisgallifrey.startrekrpg.util.Environment;
 import com.tardisgallifrey.startrekrpg.util.Menu;
 
 import java.util.HashMap;
@@ -359,10 +358,9 @@ public class Character {
 
     }
 
-    public void species_bonus(Species character_species){
+    public void species_bonus(){
 
-        assert character_species != null;
-        Attr[] bonus_attributes = Species.Attributes(character_species);
+        Attr[] bonus_attributes = Species.Attributes(this.species);
         for(int i = 0; i < 3; i++) {
             switch (bonus_attributes[i]) {
                 case DARING -> this.daring++;
@@ -373,6 +371,36 @@ public class Character {
                 case PRESENCE -> this.presence++;
             }
         }
+    }
+
+    public void environment_bonus(){
+        Environment enviro = new Environment();
+        enviro.setSettings_Conditions();
+        Conditions condition = enviro.getCondition();
+        Settings setting = enviro.getSetting();
+
+        if( condition != null){
+            switch(condition){
+                case COSMOPOLITAN -> {}
+                case OCCUPATION_WAR -> {}
+                case UTOPIAN_PARADISE -> {}
+                case STRUGGLE_HARDSHIP -> {}
+                case RIGOROUS_DISCIPLINE -> {}
+                case ASCETICISM_INTROSPECTION -> {}
+            }
+        }
+
+        if(setting != null){
+            switch(setting){
+                case HOMEWORLD -> {}
+                case BUSY_COLONY -> {}
+                case ANOTHER_SPECIES -> {}
+                case FRONTIER_COLONY -> {}
+                case ISOLATED_COLONY -> {}
+                case STARSHIP_STARBASE -> {}
+            }
+        }
+
     }
 
 

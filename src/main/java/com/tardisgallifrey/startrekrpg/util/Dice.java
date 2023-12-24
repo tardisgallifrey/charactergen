@@ -5,16 +5,23 @@ import java.util.Random;
 public class Dice {
 
     public static int D6(){
-        int r = 0;
         Random roll = new Random();
-        r = roll.nextInt(6) + 1;
-        return r;
+        return roll.nextInt(6) + 1;
     }
 
     public static int D20(){
-        int r = 0;
         Random roll = new Random();
-        r = roll.nextInt(20) + 1;
-        return r;
+        return roll.nextInt(20) + 1;
+    }
+
+    public static boolean Even_Odd(){
+        int roll = D20();
+        if( roll % 2 == 0){
+            //Even
+            return true;
+        }else{
+            //Odd
+            return false;
+        }
     }
 }

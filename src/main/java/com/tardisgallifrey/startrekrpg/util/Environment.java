@@ -19,8 +19,8 @@ public class Environment {
     }
 
     public void setSettings_Conditions(){
-        int roll = Dice.D20();
-        if(roll % 2 == 0){
+        boolean roll = Dice.Even_Odd();
+        if(roll){
             Settings_Conditions = true;
             setSetting();
             condition = null;

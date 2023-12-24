@@ -47,15 +47,14 @@ public class StarTrekCharacterGen {
             case 'Y':
                 player.setEra(true);
                 player.setSpecies(true);
-                player.species_bonus(player.getSpecies());
-                Environment enviro = new Environment();
-                enviro.setSettings_Conditions();
+                player.species_bonus();
+                player.environment_bonus();
                 player.showCharacter();
                 break;
             default:
                 player.setEra(false);
                 player.setSpecies(false);
-                player.species_bonus(player.getSpecies());
+                player.species_bonus();
                 player.showCharacter();
         }
 
