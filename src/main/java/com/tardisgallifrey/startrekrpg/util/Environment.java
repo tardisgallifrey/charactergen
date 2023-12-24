@@ -5,8 +5,6 @@ import com.tardisgallifrey.startrekrpg.enums.Settings;
 
 public class Environment {
 
-    boolean Settings_Conditions;
-
     Settings setting;
     Conditions condition;
 
@@ -21,11 +19,9 @@ public class Environment {
     public void setSettings_Conditions(){
         boolean roll = Dice.Even_Odd();
         if(roll){
-            Settings_Conditions = true;
             setSetting();
             condition = null;
         }else{
-            Settings_Conditions = false;
             setCondition();
             setting = null;
         }

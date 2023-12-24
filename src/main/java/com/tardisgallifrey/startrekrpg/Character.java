@@ -19,21 +19,21 @@ public class Character {
     private Era era;
     private Species species;
 
-    //Character Attr
-    private int control;
-    private int daring;
-    private int fitness;
-    private int insight;
-    private int presence;
-    private int reason;
+    //Character Attributes
+    int control;
+    int daring;
+    int fitness;
+    int insight;
+    int presence;
+    int reason;
 
     //Character Disciplines
-    private int command;
-    private int conn;
-    private int engineering;
-    private int security;
-    private int science;
-    private int medicine;
+    int command;
+    int conn;
+    int engineering;
+    int security;
+    int science;
+    int medicine;
 
 
     public Character(int control,
@@ -381,26 +381,110 @@ public class Character {
 
         if( condition != null){
             switch(condition){
-                case COSMOPOLITAN -> {}
-                case OCCUPATION_WAR -> {}
-                case UTOPIAN_PARADISE -> {}
-                case STRUGGLE_HARDSHIP -> {}
-                case RIGOROUS_DISCIPLINE -> {}
-                case ASCETICISM_INTROSPECTION -> {}
+                case COSMOPOLITAN -> {
+                    select_three(this.daring, this.insight, this.presence);
+                    select_three(this.command, this.conn, this.science);
+                }
+                case OCCUPATION_WAR -> {
+                    select_three(this.daring, this.fitness, this.presence);
+                    select_three(this.command, this.security, this.medicine);
+                }
+                case UTOPIAN_PARADISE -> {
+                    select_three(this.control, this.reason, this.presence);
+                    select_six(this.command,
+                                this.conn,
+                                this.engineering,
+                                this.security,
+                                this.science,
+                                this.medicine);
+                }
+                case STRUGGLE_HARDSHIP -> {
+                    select_three(this.control, this.daring, this.insight);
+                    select_three(this.conn, this.engineering, this.science);
+                }
+                case RIGOROUS_DISCIPLINE -> {
+                    select_three(this.control, this.fitness, this.reason);
+                    select_three(this.command, this.security, this.medicine);
+                }
+                case ASCETICISM_INTROSPECTION -> {
+                    select_three(this.control, this.insight, this.reason);
+                    select_three(this.science, this.engineering, this.medicine);
+                }
             }
         }
 
         if(setting != null){
             switch(setting){
-                case HOMEWORLD -> {}
-                case BUSY_COLONY -> {}
-                case ANOTHER_SPECIES -> {}
-                case FRONTIER_COLONY -> {}
-                case ISOLATED_COLONY -> {}
-                case STARSHIP_STARBASE -> {}
+                case HOMEWORLD -> {
+                    select_three(this.daring, this.insight, this.presence);
+                    select_three(this.command, this.security, this.science);
+                }
+                case BUSY_COLONY -> {
+                    select_three(this.daring, this.presence, this.presence);
+                    select_three(this.command, this.security, this.science);
+                }
+                case ANOTHER_SPECIES -> {
+                    select_six(this.control,
+                            this.daring,
+                            this.insight,
+                            this.presence,
+                            this.fitness,
+                            this.reason);
+                    select_six(this.command,
+                            this.conn,
+                            this.engineering,
+                            this.security,
+                            this.science,
+                            this.medicine);
+                }
+                case FRONTIER_COLONY -> {
+                    select_three(this.control, this.fitness, this.fitness);
+                    select_three(this.conn, this.security, this.medicine);
+                }
+                case ISOLATED_COLONY -> {
+                    select_three(this.reason, this.reason, this.insight);
+                    select_three(this.engineering, this.science, this.medicine);
+                }
+                case STARSHIP_STARBASE -> {
+                    select_three(this.control, this.control, this.insight);
+                    select_three(this.engineering, this.conn, this.engineering);
+                }
             }
         }
 
+    }
+
+    //choose one of three to increase
+    private void select_three(int item1, int item2, int item3){
+        int roll = Dice.D6();
+        switch(roll){
+            case 1, 4 -> {
+                item1++;
+            }
+            case 2, 5 -> {
+                item2++;
+            }
+            case 3, 6 -> {
+                item3++;
+            }
+        }
+    }
+
+    private void select_six(int item1,
+                            int item2,
+                            int item3,
+                            int item4,
+                            int item5,
+                            int item6){
+        int roll = Dice.D6();
+        switch(roll){
+            case 1 -> item1++;
+            case 2 -> item2++;
+            case 3 -> item3++;
+            case 4 -> item4++;
+            case 5 -> item5++;
+            case 6 -> item6++;
+        }
     }
 
 
