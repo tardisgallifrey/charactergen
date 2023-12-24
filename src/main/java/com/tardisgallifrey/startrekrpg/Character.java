@@ -232,23 +232,7 @@ public class Character {
         //Player chose random generation of era and species
         if(generate) {
 
-            HashMap<Integer, String> SpeciesList = new HashMap<>();
-            int race_index = 0;
-
-            //loop through races matching the era chosen
-            //earlier and others that apply.
-            for(Species species : Species.values()){
-                //TODO get races chosen to match other era possibilities. i.e. TOS and TNG
-                if(species.getEra().equals(this.era) ||
-                        species.getEra().equals(Era.ALL))
-                {
-                    //TODO get species list to stop at 20 for dice roll
-                    SpeciesList.put(race_index, species.getLabel());
-
-                    race_index++;
-
-                }
-            }
+            HashMap<Integer, String> SpeciesList = getIntegerStringHashMap();
 
             int result = Dice.D20();
 
@@ -329,6 +313,28 @@ public class Character {
         }
 
 
+    }
+
+    //build hashmap for SpeciesList
+    private HashMap<Integer, String> getIntegerStringHashMap() {
+        HashMap<Integer, String> SpeciesList = new HashMap<>();
+        int race_index = 0;
+
+        //loop through races matching the era chosen
+        //earlier and others that apply.
+        for(Species species : Species.values()){
+            //TODO get races chosen to match other era possibilities. i.e. TOS and TNG
+            if(species.getEra().equals(this.era) ||
+                    species.getEra().equals(Era.ALL))
+            {
+                //TODO get species list to stop at 20 for dice roll
+                SpeciesList.put(race_index, species.getLabel());
+
+                race_index++;
+
+            }
+        }
+        return SpeciesList;
     }
 
     public void showCharacter(){
