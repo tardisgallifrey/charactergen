@@ -1,5 +1,6 @@
 package com.tardisgallifrey.startrekrpg;
 
+import com.tardisgallifrey.startrekrpg.enums.Attr;
 import com.tardisgallifrey.startrekrpg.enums.Era;
 import com.tardisgallifrey.startrekrpg.enums.Species;
 import com.tardisgallifrey.startrekrpg.util.Dice;
@@ -168,7 +169,7 @@ public class Character {
         return era;
     }
 
-    public Species getRace() {
+    public Species getSpecies() {
         return species;
     }
 
@@ -349,6 +350,23 @@ public class Character {
         System.out.printf("%s  %s  %s%n", "Engineering", "Science", "Medicine");
         System.out.printf("%6d  %8d  %7d%n", this.getEngineering(), this.getScience(), this.getMedicine());
 
+
+    }
+
+    public void species_bonus(Species character_species){
+
+        assert character_species != null;
+        Attr[] bonus_attributes = Species.Attributes(character_species);
+        for(int i = 0; i < 3; i++) {
+            switch (bonus_attributes[i]) {
+                case DARING -> this.daring++;
+                case REASON -> this.reason++;
+                case CONTROL -> this.control++;
+                case FITNESS -> this.fitness++;
+                case INSIGHT -> this.insight++;
+                case PRESENCE -> this.presence++;
+            }
+        }
     }
 
 

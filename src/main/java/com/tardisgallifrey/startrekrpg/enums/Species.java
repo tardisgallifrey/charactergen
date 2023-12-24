@@ -1,5 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
+
 public enum Species {
 
     AENAR("Aenar", Era.ENTERPRISE, Attr.INSIGHT, Attr.CONTROL, Attr.PRESENCE),
@@ -54,6 +55,7 @@ public enum Species {
     TAMARIAN("Tamarian", Era.TNG, Attr.DARING, Attr.PRESENCE, Attr.REASON),
     ZAKDORN("Zakdorn", Era.TNG, Attr.CONTROL, Attr.INSIGHT, Attr.REASON);
 
+    //gets Species enum when given the label
     public static Species valueOfLabel(String label) {
         for (Species e : values()) {
             if (e.label.equals(label)) {
@@ -63,24 +65,45 @@ public enum Species {
         return null;
     }
 
-
+    //returns character's Species label
     public String getLabel() {
         return label;
     }
 
     public final String label;
 
+    //returns character's Era
     public Era getEra() {
         return era;
     }
 
     public final Era era;
 
+    public static Attr[] Attributes(Species species){
+
+        Attr[] attributes = new Attr[3];
+        //Though a loop seems obvious,
+        //the small size and differences
+        //makes this reasonable
+        attributes[0] = species.attr1;
+        attributes[1] = species.attr2;
+        attributes[2] = species.attr3;
+
+        return attributes;
+    }
+
+    public final Attr attr1;
+    public final Attr attr2;
+    public final Attr attr3;
+
     //constructor, but cannot be instantiated.
     //Is required because of enum fields
-   Species(String label, Era era, Attr ignoredAttr1, Attr ignoredAttr2, Attr ignoredAttr3){
+   Species(String label, Era era, Attr attr1, Attr attr2, Attr attr3){
        this.label = label;
        this.era = era;
+       this.attr1 = attr1;
+       this.attr2 = attr2;
+       this.attr3 = attr3;
    }
 
 

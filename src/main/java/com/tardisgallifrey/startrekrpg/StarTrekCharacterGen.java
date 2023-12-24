@@ -23,7 +23,6 @@ public class StarTrekCharacterGen {
                                         1);
 
 
-
         //Print opening messages and first question
         //Life Path can choose race and era (simplest for myself)
         //Or player can choose race and era.
@@ -32,10 +31,11 @@ public class StarTrekCharacterGen {
         System.out.println("Do you wish to allow the generator to");
         System.out.println("randomly pick Star Trek Era and Species?");
 
+
         int choice = Menu.yes_no();
 
         //The crux of the matter
-        //Intellij says this would be better with in if/then,
+        //Intellij says this would be better with an if/then,
         //but I disagree.
         //I only look for the yes answer.
         //Everything else goes to "too bad, choose for yourself"
@@ -46,11 +46,13 @@ public class StarTrekCharacterGen {
             case 'Y':
                 player.setEra(true);
                 player.setSpecies(true);
+                player.species_bonus(player.getSpecies());
                 player.showCharacter();
                 break;
             default:
                 player.setEra(false);
                 player.setSpecies(false);
+                player.species_bonus(player.getSpecies());
                 player.showCharacter();
         }
 
