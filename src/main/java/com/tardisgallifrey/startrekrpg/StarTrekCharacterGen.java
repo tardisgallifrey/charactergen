@@ -1,5 +1,6 @@
 package com.tardisgallifrey.startrekrpg;
 
+import com.tardisgallifrey.startrekrpg.util.Environment;
 import com.tardisgallifrey.startrekrpg.util.Menu;
 
 public class StarTrekCharacterGen {
@@ -47,6 +48,8 @@ public class StarTrekCharacterGen {
                 player.setEra(true);
                 player.setSpecies(true);
                 player.species_bonus(player.getSpecies());
+                Environment enviro = new Environment();
+                enviro.setSettings_Conditions();
                 player.showCharacter();
                 break;
             default:
