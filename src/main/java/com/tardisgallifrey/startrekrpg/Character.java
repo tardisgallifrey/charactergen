@@ -379,111 +379,203 @@ public class Character {
         Conditions condition = enviro.getCondition();
         Settings setting = enviro.getSetting();
 
+        //There are places where DRY fails.  This is one.
+        //I can't get a method to alter the passed in
+        //parameter.  Where is C when you need it.
         if( condition != null){
+
+            //Set condition bonuses if it is set
             switch(condition){
                 case COSMOPOLITAN -> {
-                    select_three(this.daring, this.insight, this.presence);
-                    select_three(this.command, this.conn, this.science);
+                    //attributes
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.daring++;
+                        case 2, 5 -> this.insight++;
+                        case 3, 6 -> this.presence++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.command++;
+                        case 2, 5 -> this.conn++;
+                        case 3, 6 -> this.science++;
+                    }
                 }
                 case OCCUPATION_WAR -> {
-                    select_three(this.daring, this.fitness, this.presence);
-                    select_three(this.command, this.security, this.medicine);
+                    //attributes
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.daring++;
+                        case 2, 5 -> this.presence++;
+                        case 3, 6 -> this.fitness++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.command++;
+                        case 2, 5 -> this.security++;
+                        case 3, 6 -> this.medicine++;
+                    }
                 }
                 case UTOPIAN_PARADISE -> {
-                    select_three(this.control, this.reason, this.presence);
-                    select_six(this.command,
-                                this.conn,
-                                this.engineering,
-                                this.security,
-                                this.science,
-                                this.medicine);
+                    //attributes
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.control++;
+                        case 2, 5 -> this.reason++;
+                        case 3, 6 -> this.presence++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1 -> this.command++;
+                        case 2 -> this.conn++;
+                        case 3 -> this.security++;
+                        case 4 -> this.science++;
+                        case 5 -> this.medicine++;
+                        case 6 -> this.engineering++;
+                    }
                 }
                 case STRUGGLE_HARDSHIP -> {
-                    select_three(this.control, this.daring, this.insight);
-                    select_three(this.conn, this.engineering, this.science);
+                    //attributes
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.control++;
+                        case 2, 5 -> this.daring++;
+                        case 3, 6 -> this.insight++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.conn++;
+                        case 2, 5 -> this.engineering++;
+                        case 3, 6 -> this.science++;
+                    }
                 }
                 case RIGOROUS_DISCIPLINE -> {
-                    select_three(this.control, this.fitness, this.reason);
-                    select_three(this.command, this.security, this.medicine);
+                    //attributes
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.control++;
+                        case 2, 5 -> this.fitness++;
+                        case 3, 6 -> this.reason++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.command++;
+                        case 2, 5 -> this.security++;
+                        case 3, 6 -> this.medicine++;
+                    }
                 }
                 case ASCETICISM_INTROSPECTION -> {
-                    select_three(this.control, this.insight, this.reason);
-                    select_three(this.science, this.engineering, this.medicine);
+                    //attributes
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.control++;
+                        case 2, 5 -> this.insight++;
+                        case 3, 6 -> this.reason++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.science++;
+                        case 2, 5 -> this.engineering++;
+                        case 3, 6 -> this.medicine++;
+                    }
                 }
             }
         }
 
+        //Set setting bonuses, if set
         if(setting != null){
             switch(setting){
                 case HOMEWORLD -> {
-                    select_three(this.daring, this.insight, this.presence);
-                    select_three(this.command, this.security, this.science);
+                    //attributes
+                    switch(Dice.D6()){
+                        case 1 -> this.control++;
+                        case 2 -> this.daring++;
+                        case 3 -> this.insight++;
+                        case 4 -> this.presence++;
+                        case 5 -> this.fitness++;
+                        case 6 -> this.reason++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.command++;
+                        case 2, 5 -> this.security++;
+                        case 3, 6 -> this.science++;
+                    }
                 }
                 case BUSY_COLONY -> {
-                    select_three(this.daring, this.presence, this.presence);
-                    select_three(this.command, this.security, this.science);
+                    //attributes
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.daring++;
+                        case 2, 5 -> this.presence++;
+                        case 3, 6 -> this.science++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.command++;
+                        case 2, 5 -> this.security++;
+                        case 3, 6 -> this.science++;
+                    }
                 }
                 case ANOTHER_SPECIES -> {
-                    select_six(this.control,
-                            this.daring,
-                            this.insight,
-                            this.presence,
-                            this.fitness,
-                            this.reason);
-                    select_six(this.command,
-                            this.conn,
-                            this.engineering,
-                            this.security,
-                            this.science,
-                            this.medicine);
+                    //attributes
+                    switch(Dice.D6()){
+                        case 1 -> this.control++;
+                        case 2 -> this.daring++;
+                        case 3 -> this.fitness++;
+                        case 4 -> this.presence++;
+                        case 5 -> this.insight++;
+                        case 6 -> this.reason++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1 -> this.command++;
+                        case 2 -> this.conn++;
+                        case 3 -> this.security++;
+                        case 4 -> this.engineering++;
+                        case 5 -> this.science++;
+                        case 6 -> this.medicine++;
+                    }
                 }
                 case FRONTIER_COLONY -> {
-                    select_three(this.control, this.fitness, this.fitness);
-                    select_three(this.conn, this.security, this.medicine);
+                    //attributes
+                    int roll = Dice.D6();
+                    if(roll < 4){
+                        this.control++;
+                    }else{
+                        this.fitness++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.conn++;
+                        case 2, 5 -> this.security++;
+                        case 3, 6 -> this.medicine++;
+                    }
                 }
                 case ISOLATED_COLONY -> {
-                    select_three(this.reason, this.reason, this.insight);
-                    select_three(this.engineering, this.science, this.medicine);
+                    //attributes
+                    int roll = Dice.D6();
+                    if(roll < 4){
+                        this.reason++;
+                    }else{
+                        this.insight++;
+                    }
+                    //Disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.engineering++;
+                        case 2, 5 -> this.science++;
+                        case 3, 6 -> this.medicine++;
+                    }
                 }
                 case STARSHIP_STARBASE -> {
-                    select_three(this.control, this.control, this.insight);
-                    select_three(this.engineering, this.conn, this.engineering);
+                    //attributes
+                    int roll = Dice.D6();
+                    if(roll < 4){
+                        this.control++;
+                    }else{
+                        this.insight++;
+                    }
+                    //disciplines
+                    switch(Dice.D6()){
+                        case 1, 4 -> this.command++;
+                        case 2, 5 -> this.conn++;
+                        case 3, 6 -> this.engineering++;
+                    }
                 }
             }
-        }
-
-    }
-
-    //choose one of three to increase
-    private void select_three(int item1, int item2, int item3){
-        int roll = Dice.D6();
-        switch(roll){
-            case 1, 4 -> {
-                item1++;
-            }
-            case 2, 5 -> {
-                item2++;
-            }
-            case 3, 6 -> {
-                item3++;
-            }
-        }
-    }
-
-    private void select_six(int item1,
-                            int item2,
-                            int item3,
-                            int item4,
-                            int item5,
-                            int item6){
-        int roll = Dice.D6();
-        switch(roll){
-            case 1 -> item1++;
-            case 2 -> item2++;
-            case 3 -> item3++;
-            case 4 -> item4++;
-            case 5 -> item5++;
-            case 6 -> item6++;
         }
     }
 
