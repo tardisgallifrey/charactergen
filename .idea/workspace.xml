@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="Environment initial 12/24/23">
+    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="Env bonus finished, new jar 12/25/23">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startrekrpg-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/startrekrpg-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703457364836</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Env bonus finished, new jar 12/25/23">
+      <option name="closed" value="true" />
+      <created>1703523863710</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703523863710</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -303,6 +309,7 @@
     <MESSAGE value="Attribute bonus 12/23/23" />
     <MESSAGE value="Hashmap fix 12/23/23" />
     <MESSAGE value="Environment initial 12/24/23" />
-    <option name="LAST_COMMIT_MESSAGE" value="Environment initial 12/24/23" />
+    <MESSAGE value="Env bonus finished, new jar 12/25/23" />
+    <option name="LAST_COMMIT_MESSAGE" value="Env bonus finished, new jar 12/25/23" />
   </component>
 </project>
