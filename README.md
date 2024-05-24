@@ -4,7 +4,7 @@
 This Java console app will run the player through the Life Path Character Generation Process as described in Captain's Log Solo RolePlaying Game.  The game author is Modiphius.
 
 This is a project in progress.
-I have finished up to step 2 in the LifePath as per the book.
+I have a complete flow path of the generation process, but lots of TODO's are still left to detail.
 
 I hope to change this to a web app via Spring Boot and Thymeleaf eventually.  
 
