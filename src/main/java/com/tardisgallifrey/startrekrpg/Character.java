@@ -580,4 +580,147 @@ public class Character {
     }
 
 
+    public void upbringing(){
+        if(this.species == Species.KLINGON){
+            System.out.println("Your upbringing will go by caste.");
+        }else{
+            System.out.println("Your upbringing will go by upbringing");
+        }
+    }
+
+    public void education(){
+        int roll = Dice.D20();
+        int track_roll = Dice.D20();
+
+        if(roll < 6){
+            System.out.println("Congrats, you are going to Starfleet Academy.");
+
+            if(track_roll < 7){
+                System.out.println("You chose Command Track");
+            }else if(track_roll < 14){
+                System.out.println("You chose Operations Track.");
+            }else{
+                System.out.println("You chose Science Track.");
+            }
+        }else if(roll < 11){
+            System.out.println("You received Allied military training.");
+
+            if(track_roll < 6){
+                System.out.println("You are a member of the military rank and file.");
+            }else if(track_roll < 11){
+                System.out.println("You have received officer training.");
+            }else if(track_roll < 16){
+                System.out.println("You have received Intelligence training.");
+            }else{
+                System.out.println("You are a member of a militia or a guerrilla force.");
+            }
+        }else if(roll < 16){
+            System.out.println("You become a diplomat.");
+
+            if(track_roll < 11){
+                System.out.println("You are part of your diplomatic corps.");
+            }else{
+                System.out.println("Your diplomatic status is honorary.");
+            }
+        }else{
+            System.out.println("You are a civilian with a civilian education.");
+            if(track_roll < 5){
+                System.out.println("You are involved with freight and transport.");
+            }else if(track_roll < 8){
+                System.out.println("You are part of Law Enforcement.");
+            }else if(track_roll < 11){
+                System.out.println("You are a physician.");
+            }else if(track_roll < 15){
+                System.out.println("You are involved in government as politician or bureaucrat.");
+            } else if (track_roll < 17) {
+                System.out.println("You are a scientific or technical expert.");
+            } else {
+                System.out.println("You are a trader or merchant");
+            }
+        }
+    }
+
+    public void career_length(){
+        int roll = Dice.D20();
+        if(roll < 7){
+            System.out.println("You are a novice in your career.");
+        } else if (roll < 14) {
+            System.out.println("You are experienced in your career.");
+
+        }else{
+            System.out.println("You are a veteran or a master in your career.");
+        }
+        //TODO: choose a value from a selection
+    }
+
+    public void career_events(){
+        int roll1;
+        int roll2;
+        String event1 = "";
+        String event2 = "";
+
+        while( (roll1 = Dice.D20()) != (roll2 = Dice.D20())) {
+            event1 = event_selection(roll1);
+            event2 = event_selection(roll2);
+        }
+        System.out.println(event1);
+        System.out.println(event2);
+
+
+    }
+
+    private String event_selection(int roll){
+        return switch (roll) {
+            case 1 -> "Ship Destroyed";
+            case 2 -> "Death of a Friend";
+            case 3 -> "Lauded by another culture";
+            case 4 -> "Negotiated a Treaty";
+            case 5 -> "Required to take Command";
+            case 6 -> "Encounter with a truly alien being";
+            case 7 -> "Serious Injury";
+            case 8 -> "Conflict with a hostile culture";
+            case 9 -> "Mentored";
+            case 10 -> "Transporter accident";
+            case 11 -> "Dealing with a Plague";
+            case 12 -> "Betrayed ideals for a superior";
+            case 13 -> "Called out a superior";
+            case 14 -> "Developed a new battle strategy";
+            case 15 -> "Learned a unique language";
+            case 16 -> "Discovered an artifact";
+            case 17 -> "Received a special commendation";
+            case 18 -> "Solved an engineering crisis";
+            case 19 -> "Found a breakthrough or an invention";
+            case 20 -> "First Contact";
+            default -> "All things mostly peaceful";
+        };
+    }
+
+    public void final_touches(){
+        //TODO: add one more value
+        //TODO: increase two attributes by 1 each (allow player choice)
+        //TODO: increase 2 disciplines by 1 each (allow player choice)
+        //TODO: check that disciplines are less than five.
+        //TODO: check that only one discipline is five (allow player choice of which to keep at five)
+        //TODO: for all disciplines reduced add to another that is less than five until it is less than 5
+        //TODO: check all attributes summed is 56
+        //TODO: check all disciplines summed is 16
+        //TODO: player should have four values and six focuses, correct if not.
+        System.out.println("Doing final touches....");
+    }
+
+    public void assignment(){
+        //TODO: give player assignment from following list according to player settings
+        //Commanding officer (must be experienced, command track, or allied officer)
+        //Exec officer (must match above, but can be novice)
+        //Operations manager (must be experienced, operations or engineering)
+        //Flight controller or helmsman
+        //Chief Engineer (must be veteran, operations, or engineering)
+        //Chief of Security (must be experienced, operations)
+        //Chief Medical Officer (must be veteran, physician, sciences)
+        //Science Officer (must be sciences)
+        //Ship's Counselor (must be experienced, sciences)
+        //Comm officer
+        //TODO: assign rank Captain, Commander, Lt Comm, Lt, LtJG, Ensign--set conditions
+        System.out.println("You will now receive your character's rank and assignment.");
+    }
 }

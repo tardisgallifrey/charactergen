@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="Env bonus finished, new jar 12/25/23">
+    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="Added several enum classes 01/02/24">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/FocusCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/StarTrekCharacterGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/StarTrekCharacterGen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +54,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tardisgallifrey&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/tardisgallifrey/charactergen.git&quot;,
+    &quot;accountId&quot;: &quot;fcc1ee63-c0a6-4eb0-9c44-d24f84fbe58b&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -88,7 +103,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.startrekrpg [fatJar]">
+  <component name="RunManager" selected="Application.StarTrekCharacterGen">
     <configuration name="StarTrekCharacterGen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tardisgallifrey.startrekrpg.StarTrekCharacterGen" />
       <module name="startrekrpg.main" />
@@ -130,15 +145,6 @@
         <item itemvalue="Application.StarTrekCharacterGen" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-249ae16d76d6-7c0527ad" />
-        <option value="jdk-17.0.9-corretto-17.0.9-8336523bb0d9-9b5c8e75" />
-        <option value="jdk-21.0.1-openjdk-21.0.1-8336523bb0d9-cc9f59e6" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -293,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703523863710</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added several enum classes 01/02/24">
+      <option name="closed" value="true" />
+      <created>1704133285591</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1704133285591</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -310,6 +324,7 @@
     <MESSAGE value="Hashmap fix 12/23/23" />
     <MESSAGE value="Environment initial 12/24/23" />
     <MESSAGE value="Env bonus finished, new jar 12/25/23" />
-    <option name="LAST_COMMIT_MESSAGE" value="Env bonus finished, new jar 12/25/23" />
+    <MESSAGE value="Added several enum classes 01/02/24" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added several enum classes 01/02/24" />
   </component>
 </project>

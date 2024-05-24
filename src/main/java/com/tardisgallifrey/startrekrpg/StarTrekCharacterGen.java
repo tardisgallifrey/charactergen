@@ -34,29 +34,23 @@ public class StarTrekCharacterGen {
 
         int choice = Menu.yes_no();
 
-        //The crux of the matter
-        //Intellij says this would be better with an if/then,
-        //but I disagree.
-        //I only look for the yes answer.
-        //Everything else goes to "too bad, choose for yourself"
-        //because if you can't be bothered to press the right
-        //buttons...
-        switch(choice){
-            case 'y':
-            case 'Y':
-                player.setEra(true);
-                player.setSpecies(true);
-                player.species_bonus();
-                player.environment_bonus();
-                player.showCharacter();
-                break;
-            default:
-                player.setEra(false);
-                player.setSpecies(false);
-                player.species_bonus();
-                player.environment_bonus();
-                player.showCharacter();
+        if(choice == 'Y' || choice == 'y'){
+            player.setEra(true);
+            player.setSpecies(true);
+        }else{
+            player.setEra(false);
+            player.setSpecies(false);
         }
+
+        player.species_bonus();
+        player.environment_bonus();
+        player.upbringing();
+        player.education();
+        player.career_length();
+        player.career_events();
+        player.final_touches();
+        player.assignment();
+        player.showCharacter();
 
             //        End of main function
     }
