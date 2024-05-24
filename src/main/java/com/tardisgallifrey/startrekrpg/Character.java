@@ -581,8 +581,48 @@ public class Character {
 
 
     public void upbringing(){
+        int roll = Dice.D20();
+
         if(this.species == Species.KLINGON){
-            System.out.println("Your upbringing will go by caste.");
+            if(roll < 4){
+                System.out.println("Warrior Caste");
+                //TODO: player chooses to accept or rebel
+                //TODO: accept = daring +2, fitness +1
+                //TODO: rebel = reason +2, insight +1
+                //TODO: player chooses, command, conn, or security +1
+                //TODO: add focus from militaristic types
+            } else if (roll < 8) {
+                System.out.println("Merchant Caste");
+                //TODO: accept = daring +1, presence +2
+                //TODO: rebel = reason +1, insight +2
+                //TODO: command, engineering, or science +1
+                //TODO: add a focus from merchant type focuses
+            } else if (roll < 13) {
+                System.out.println("Agriculture Caste");
+                //TODO: accept = control +1, fitness +2
+                //TODO: rebel = presence +1, reason +2
+                //TODO: conn, security, or Medicine +1
+                //TODO: add focus from science types or ops types like ag
+            } else if (roll < 15) {
+                System.out.println("Scientific Caste");
+                //TODO: accept = control + 2, reason +1
+                //TODO: rebel = daring +1, insight +2
+                //TODO: engineering, science, or medicine +1
+                //TODO: focus from types related to engineering or science
+            } else if (roll < 18) {
+                System.out.println("Artistic Caste");
+                //TODO: accept = insight +1, presence +2
+                //TODO: rebel = daring +1, fitness +2
+                //TODO: command, engineering or science +1
+                //TODO: focus from softer skills, sciences
+            } else {
+                System.out.println("Academic Caste");
+                //TODO: accept = control +1, reason +2
+                //TODO: rebel = fitness +1, insight +2
+                //TODO: command, security or science +1
+                //TODO: focus from sciences, government, political
+            }
+
         }else{
             System.out.println("Your upbringing will go by upbringing");
         }
