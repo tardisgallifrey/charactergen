@@ -47,6 +47,7 @@ public class StarTrekCharacterGen {
         player.upbringing();
         player.education();
         player.career_length();
+        //TODO: start below next time
         player.career_events();
         player.final_touches();
         player.assignment();

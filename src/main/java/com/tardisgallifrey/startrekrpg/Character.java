@@ -625,6 +625,42 @@ public class Character {
 
         }else{
             System.out.println("Your upbringing will go by upbringing");
+            //TODO: Business or Trade, accept = daring +1, presence +2
+            //TODO: rebel = insight +2, reason +1
+            //TODO: increase command, engineering, or science by 1
+            //TODO: add focus from finance, geology, linguistics,
+            //TODO: manufacturing, metallurgy, negotiation, survey
+
+            //TODO: Agricultural or rural
+            //TODO: accept = control +1, fitness +2
+            //TODO: rebel = presence +1, reason +2
+            //TODO: increase conn, security, medicine by 1
+            //TODO: focus from  animal handling, athletics, emergency medicine
+            //TODO: endurance, ground vehicles, infectious diseases, navigation
+            //TODO: survival training, toxicology
+
+            //TODO: Science and Technology
+            //TODO: accept = control +2, reason +1
+            //TODO: rebel = daring +1, insight +2
+            //TODO: conn, engineering, science or medicine
+            //TODO: focuses from astronavigation, astrophysics, computers,
+            //TODO: cybernetics, genetics, physics, power systems, quantum mechanics
+            //TODO: subspace comms, surgery, warp field dynamics, xenobiology
+
+            //TODO: artistic and creative
+            //TODO: accept = insight +1, presence +2
+            //TODO: rebel = daring +1, fitness +1
+            //TODO: command, engineering, or science
+            //TODO: focus from botany, cultural studies, holoprogramming
+            //TODO: linguistics, music, observation, persuasion, psychology
+
+            //TODO: diplomacy and politics
+            //TODO: accept = control +1, presence +2
+            //TODO: rebel = fitness +1, reason +2
+            //TODO: command, conn, or security
+            //TODO: composure, debate, diplomacy, espionage,
+            //TODO: interrogation, law, philosophy, starfleet protocol
+
         }
     }
 
@@ -637,45 +673,191 @@ public class Character {
 
             if(track_roll < 7){
                 System.out.println("You chose Command Track");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: command or conn +2
+                //TODO: two other disciplines get +1 each
+                //TODO: cannot take any individual attribute over +4
+                //TODO: focus, add three from
+                //TODO: astronavigation, composure, diplomacy,
+                //TODO: evasive action, EVAs, Helm Ops, Inspiration,
+                //TODO: small craft, starfleet protocols,
+                //TODO: starship recognition, team dynamics
+
             }else if(track_roll < 14){
                 System.out.println("You chose Operations Track.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: security or engineering +2
+                //TODO: two other disciplines get +1 each
+                //TODO: cannot take any individual attribute over +4
+                //TODO: focus, add three from
+                //TODO: computers, cybernetics, electroplasma power,
+                //TODO: espionage, hand phasers, h-to-h combat
+                //TODO: infiltration, interrogation, survival,
+                //TODO: shipboard tactical systems, transporter/replicator
+                //TODO: warp field dynamics
+
             }else{
                 System.out.println("You chose Science Track.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: science or medicine +2
+                //TODO: two other disciplines get +1 each
+                //TODO: cannot take any individual attribute over +4
+                //TODO: focus, add three from
+                //TODO: anthropology, astrophysics, botany,
+                //TODO: computers, cybernetics, genetics, geology
+                //TODO: infectious diseases, linguistics, physics
+                //TODO: psychiatry, quantum mechanics, trauma surgery
+                //TODO: virology, warp field dynamics, xenobiology
+
             }
         }else if(roll < 11){
             System.out.println("You received Allied military training.");
 
             if(track_roll < 6){
                 System.out.println("You are a member of the military rank and file.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: must +1 fitness from the three
+                //TODO: security +2
+                //TODO: two other disciplines get +1 each
+                //TODO: cannot take any individual attribute over +4
+                //TODO: focus, add three from
+                //TODO: composure, demolitions, disruptors, EVAs
+                //TODO: h-to-h combat, hand phasers, infiltration
+                //TODO: military protocol, small craft, survival
+
             }else if(track_roll < 11){
                 System.out.println("You have received officer training.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: command and security, +2 for 1, +1 for the other
+                //TODO: +1 to conn or engineering or science or medicine
+                //TODO: focus, add three from
+                //TODO: diplomacy, disruptors, h-to-h combat, history
+                //TODO: inspiration, military protocol, politics
+                //TODO: shipboard tactical systems, strategy & tactics
+
             }else if(track_roll < 16){
                 System.out.println("You have received Intelligence training.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: must pick insight or reason for one attribute
+                //TODO: increase one discipline by 2 and another by 1
+                //TODO: one increase must be to security
+                //TODO: focus, add three from
+                //TODO: computers, espionage, infiltration, interrogation
+                //TODO: linguistics, persuasion, threat analysis
+
             }else{
                 System.out.println("You are a member of a militia or a guerrilla force.");
-            }
-        }else if(roll < 16){
-            System.out.println("You become a diplomat.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: daring or fitness must be increased
+                //TODO: security +2, two others by 1
+                //TODO: focus, add three from
+                //TODO: composure, demolition, disguise, disruptors
+                //TODO: h-to-h combat, hand phasers, infiltration
+                //TODO: inspiration, interrogation, psychological warfare
 
-            if(track_roll < 11){
-                System.out.println("You are part of your diplomatic corps.");
+            }
+            }else if(roll < 16){
+                System.out.println("You become a diplomat.");
+
+                if(track_roll < 11){
+                    System.out.println("You are part of your diplomatic corps.");
+                    //TODO: add a value
+                    //TODO: add +3 to attributes, choose randomly or select?
+                    //TODO: reason or insight must increase
+                    //TODO: command +2, to others +1
+                    //TODO: focus, add three from
+                    //TODO: diplomacy, espionage, history, linguistics
+                    //TODO: philosophy, politics, xenoanthropology
+
             }else{
                 System.out.println("Your diplomatic status is honorary.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: command +2, two others +1
+                //TODO: focus, add three from
+                //TODO: diplomacy, espionage, history, leadership
+                //TODO: philosophy, politics, strategy and tactics
+                //TODO: xenoanthropology
             }
         }else{
             System.out.println("You are a civilian with a civilian education.");
             if(track_roll < 5){
                 System.out.println("You are involved with freight and transport.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: conn or engineering +2, two others +1
+                //TODO: decrease one discipline by 1 to add to another
+                //TODO: focus, add three from
+                //TODO: astronavigation, bureaucracy, emergency repairs
+                //TODO: EVAs, helm ops, logistics, propulsion systems
+                //TODO: small craft, spacecraft recognition,
+                //TODO: transporters/replicators
+
             }else if(track_roll < 8){
                 System.out.println("You are part of Law Enforcement.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: command or security +2, two others +1
+                //TODO: may decrease one by 1 to add to another
+                //TODO: focus, add three from
+                //TODO: h-to-h combat, interrogation, intimidation
+                //TODO: law, phasers, small craft
+
             }else if(track_roll < 11){
                 System.out.println("You are a physician.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: medicine +2, two others +1
+                //TODO: decrease one by 1 to add to another, if wished
+                //TODO: focus, add three from
+                //TODO: cybernetics, emergency medicine, genetics
+                //TODO: psychiatry, surgery, virology, xenobiology
+
+
             }else if(track_roll < 15){
                 System.out.println("You are involved in government as politician or bureaucrat.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: must increase insight or presence
+                //TODO: command +2, two others +1
+                //TODO: may decrease one by 1 to add to another
+                //TODO: focus, add three from
+                //TODO: bureaucracy, diplomacy, history, linguistics
+                //TODO: philosophy, politics,
+                //TODO: or something related to your role in public service.
+
+
             } else if (track_roll < 17) {
                 System.out.println("You are a scientific or technical expert.");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: reason must be increased
+                //TODO: science or engineering +2, two others +1
+                //TODO: may decrease one by 1 to add to another
+                //TODO: focus, add three from
+                //TODO: astrophysics, botany, cybernetics, exotectonics
+                //TODO: genetics, quantum mechanics, subspace mechanics
+                //TODO: temporal mechanics, transporters/replicators
+                //TODO: warp field dynamics
+
             } else {
                 System.out.println("You are a trader or merchant");
+                //TODO: add a value
+                //TODO: add +3 to attributes, choose randomly or select?
+                //TODO: must increase insight or presence
+                //TODO: command +2, two others +1
+                //TODO: may decrease one by 1 to add to another
+                //TODO: focus, add three from
+                //TODO: art, cooking, disruptors, economics,
+                //TODO: logistics, persuasion, psychology, tailoring
+
             }
         }
     }
@@ -684,11 +866,14 @@ public class Character {
         int roll = Dice.D20();
         if(roll < 7){
             System.out.println("You are a novice in your career.");
+            //TODO: add a value
         } else if (roll < 14) {
             System.out.println("You are experienced in your career.");
+            //TODO: add a value
 
         }else{
             System.out.println("You are a veteran or a master in your career.");
+            //TODO: add a value
         }
         //TODO: choose a value from a selection
     }
@@ -709,6 +894,7 @@ public class Character {
 
     }
 
+    //TODO: start here next time
     private String event_selection(int roll){
         return switch (roll) {
             case 1 -> "Ship Destroyed";

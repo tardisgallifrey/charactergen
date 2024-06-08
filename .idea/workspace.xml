@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="Added several enum classes 01/02/24">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/FocusCommand.java" afterDir="false" />
+    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="complete topical framework 05/24/24">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/StarTrekCharacterGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/StarTrekCharacterGen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="startrekrpg" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="startrekrpg" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -103,7 +107,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StarTrekCharacterGen">
+  <component name="RunManager" selected="Gradle.startrekrpg [fatJar]">
     <configuration name="StarTrekCharacterGen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tardisgallifrey.startrekrpg.StarTrekCharacterGen" />
       <module name="startrekrpg.main" />
@@ -307,7 +311,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704133285591</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="complete topical framework 05/24/24">
+      <option name="closed" value="true" />
+      <created>1716571181254</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716571181254</updated>
+    </task>
+    <task id="LOCAL-00021" summary="complete topical framework 05/24/24">
+      <option name="closed" value="true" />
+      <created>1716571425865</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1716571425865</updated>
+    </task>
+    <task id="LOCAL-00022" summary="complete topical framework 05/24/24">
+      <option name="closed" value="true" />
+      <created>1716576462842</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716576462842</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -325,6 +353,7 @@
     <MESSAGE value="Environment initial 12/24/23" />
     <MESSAGE value="Env bonus finished, new jar 12/25/23" />
     <MESSAGE value="Added several enum classes 01/02/24" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added several enum classes 01/02/24" />
+    <MESSAGE value="complete topical framework 05/24/24" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete topical framework 05/24/24" />
   </component>
 </project>
