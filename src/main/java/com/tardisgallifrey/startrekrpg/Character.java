@@ -884,6 +884,8 @@ public class Character {
         String event1 = "";
         String event2 = "";
 
+
+
         while( (roll1 = Dice.D20()) != (roll2 = Dice.D20())) {
             event1 = event_selection(roll1);
             event2 = event_selection(roll2);
@@ -919,6 +921,49 @@ public class Character {
             case 20 -> "First Contact";
             default -> "All things mostly peaceful";
         };
+
+        //TODO: each character gets two events
+        //TODO: give attributes and discipline below
+        //TODO: ship destroyed = daring +1, security +1
+        //TODO: focus: EVAs, small craft, survival types
+        //TODO: death of a friend = insight +1, medicine +1
+        //TODO: lauded by other culture = presence +1, science +1
+        //TODO: focus: focus important to culture X, what is X?
+        //TODO: negotiate treaty = control +1, command +1
+        //TODO: focus: diplomacy, politics, negotiation types
+        //TODO: take command = daring +1, command +1
+        //TODO: focus: composure, inspiration, lead by example
+        //TODO: alien encounter = reason +1, science +1
+        //TODO: focus: empathy, philosophy, xenobiology
+        //TODO: serious injury = fitness +1, medicine +1
+        //TODO: focus: art, athletics, philosophy
+        //TODO: hostile conflict culture = fitness +1, security +1
+        //TODO: focus: hand phasers, h-to-h combat, shipboard tac systems
+        //TODO: mentored = attribute +1, conn +1
+        //TODO: focus: composure, etiquette,
+        //TODO: transporter accident = control +1, conn +1
+        //TODO: focus: quantum mech, small craft, trans/replicators
+        //TODO: plague = insight +1, medicine +1
+        //TODO: focus: EM med, infectious dis, triage
+        //TODO: betrayed own ideals for superior = presence +1, command +1
+        //TODO: focus: investigation, inspiration, persuasion
+        //TODO: called out a superior = reason +1, conn +1
+        //TODO: focus: history, starfleet protocol, UCMJ
+        //TODO: new battle strategy = daring +1, security +1
+        //TODO: focus: combat tactics, hazard awareness, lead by example
+        //TODO: learned unique language = insight +1, science +1
+        //TODO: focus: linguistics related, culture related.
+        //TODO: discovered artifact = reason +1, engineering +1
+        //TODO: focus: ancient tech, computers, reverse engineering
+        //TODO: special commendation = fitness +1, discipline +1
+        //TODO: focus: athletics, EM med, survival
+        //TODO: solved engineering crisis = control +1, engineering +1
+        //TODO: focus: EPS systems, fusion reactors, warp engines
+        //TODO: breakthrough/invention = attribute +1, engineering +1
+        //TODO: focus: experimental tech, improvisation, invention
+        //TODO: first contact = presence +1, discipline +1
+        //TODO: focus: xenobiology, cultural studies, diplomacy
+
     }
 
     public void final_touches(){

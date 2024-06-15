@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="complete topical framework 05/24/24">
+    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="still doing topical framework 6/8/24">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716576462842</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="still doing topical framework 6/8/24">
+      <option name="closed" value="true" />
+      <created>1717882304154</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1717882304154</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -354,6 +361,7 @@
     <MESSAGE value="Env bonus finished, new jar 12/25/23" />
     <MESSAGE value="Added several enum classes 01/02/24" />
     <MESSAGE value="complete topical framework 05/24/24" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete topical framework 05/24/24" />
+    <MESSAGE value="still doing topical framework 6/8/24" />
+    <option name="LAST_COMMIT_MESSAGE" value="still doing topical framework 6/8/24" />
   </component>
 </project>
