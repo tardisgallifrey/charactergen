@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum CivilianCareer {
+public enum CivilianCareer implements D20Enum {
     TRANSPORTATION("Freight and Transport"),
     LAW_ENFORCEMENT("Law Enforcement"),
     PHYSICIAN("Physician"),
@@ -12,5 +12,10 @@ public enum CivilianCareer {
 
     CivilianCareer(String label) {
         this.label = label;
+    }
+
+    @Override
+    public String getLabel() {
+        return this.label;
     }
 }

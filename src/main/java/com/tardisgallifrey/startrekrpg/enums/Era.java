@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum Era {
+public enum Era implements D20Enum{
 
     ENTERPRISE("Enterprise Era"),
     TOS("The Original Series"),

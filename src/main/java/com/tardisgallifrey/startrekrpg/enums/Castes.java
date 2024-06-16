@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum Castes {
+public enum Castes implements D20Enum {
 
     WARRIOR("Warrior"),
     MERCHANT("Merchant"),
@@ -14,5 +14,10 @@ public enum Castes {
     Castes(String label) {
 
         this.label = label;
+    }
+
+    @Override
+    public String getLabel() {
+        return this.label;
     }
 }

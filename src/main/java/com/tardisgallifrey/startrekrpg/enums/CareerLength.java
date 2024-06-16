@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum CareerLength {
+public enum CareerLength implements D20Enum {
 
     APPRENTICE("Novice"),
     JOURNEYMAN("Experience"),
@@ -10,5 +10,10 @@ public enum CareerLength {
 
     CareerLength(String label) {
         this.label = label;
+    }
+
+    @Override
+    public String getLabel() {
+        return this.label;
     }
 }

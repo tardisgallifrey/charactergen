@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="still doing topical framework 6/8/24">
+    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="final TODO framework 6/16/24">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/D20Enum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/AlliedMilitary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/AlliedMilitary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/CareerEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/CareerEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/CareerLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/CareerLength.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/Castes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/Castes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/CivilianCareer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/CivilianCareer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/DiplomaticTraining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/DiplomaticTraining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/FocusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/FocusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/util/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/util/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +70,7 @@
       <list>
         <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -106,7 +118,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.startrekrpg [fatJar]">
+  <component name="RunManager" selected="Application.StarTrekCharacterGen">
     <configuration name="StarTrekCharacterGen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tardisgallifrey.startrekrpg.StarTrekCharacterGen" />
       <module name="startrekrpg.main" />
@@ -342,7 +354,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717882304154</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="final TODO framework 6/16/24">
+      <option name="closed" value="true" />
+      <created>1718491722034</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1718491722034</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -362,6 +382,7 @@
     <MESSAGE value="Added several enum classes 01/02/24" />
     <MESSAGE value="complete topical framework 05/24/24" />
     <MESSAGE value="still doing topical framework 6/8/24" />
-    <option name="LAST_COMMIT_MESSAGE" value="still doing topical framework 6/8/24" />
+    <MESSAGE value="final TODO framework 6/16/24" />
+    <option name="LAST_COMMIT_MESSAGE" value="final TODO framework 6/16/24" />
   </component>
 </project>

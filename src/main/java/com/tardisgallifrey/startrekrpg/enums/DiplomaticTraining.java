@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum DiplomaticTraining {
+public enum DiplomaticTraining implements D20Enum {
     DIPLOMATIC_CORPS("Diplomatic Corps"),
     HONORARY_STATUS("Honorary Status");
 
@@ -8,5 +8,10 @@ public enum DiplomaticTraining {
 
     DiplomaticTraining(String label) {
         this.label = label;
+    }
+
+    @Override
+    public String getLabel() {
+        return this.label;
     }
 }

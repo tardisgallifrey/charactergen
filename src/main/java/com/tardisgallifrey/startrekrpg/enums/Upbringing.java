@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum Upbringing {
+public enum Upbringing implements D20Enum{
 
     STARFLEET("Starfleet"),
     BUSINESS("Business or Trade"),
@@ -13,5 +13,10 @@ public enum Upbringing {
 
     Upbringing(String label) {
         this.label = label;
+    }
+
+    @Override
+    public String getLabel() {
+        return this.label;
     }
 }

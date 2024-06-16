@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum FocusCommand {
+public enum FocusCommand implements D20Enum{
 
     ART("art"),
     BARGAIN("bargain"),
@@ -43,7 +43,11 @@ public enum FocusCommand {
     TIME_MGMT("time management")
     ;
 
-    private String label;
+    private final String label;
+
+    public String getLabel(){
+        return label;
+    }
 
     FocusCommand(String label) {
         this.label = label;

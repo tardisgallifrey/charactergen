@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum AlliedMilitary {
+public enum AlliedMilitary implements D20Enum {
 
     ENLISTED("Rank and File"),
     OFFICER("Officer Training"),
@@ -11,5 +11,10 @@ public enum AlliedMilitary {
 
     AlliedMilitary(String label) {
         this.label = label;
+    }
+
+    @Override
+    public String getLabel() {
+        return this.label;
     }
 }

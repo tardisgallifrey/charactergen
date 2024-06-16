@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum Track {
+public enum Track implements D20Enum{
     COMMAND("Command Track"),
     OPERATIONS("Operations Track"),
     SCIENCES("Sciences Track");
@@ -9,5 +9,10 @@ public enum Track {
 
     Track(String label) {
         this.label = label;
+    }
+
+    @Override
+    public String getLabel() {
+        return this.label;
     }
 }

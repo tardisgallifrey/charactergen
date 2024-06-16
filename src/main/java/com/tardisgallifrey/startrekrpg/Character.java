@@ -5,6 +5,7 @@ import com.tardisgallifrey.startrekrpg.util.Dice;
 import com.tardisgallifrey.startrekrpg.util.Environment;
 import com.tardisgallifrey.startrekrpg.util.Menu;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 /*This is the character class for the Star Trek Adventures
@@ -336,6 +337,7 @@ public class Character {
         return SpeciesList;
     }
 
+
     public void showCharacter(){
         //May look dumb, but using printf for each
         //line gives me more control, IMO
@@ -579,18 +581,50 @@ public class Character {
         }
     }
 
+    private char acceptRebel(){
+        System.out.println("Do you accept or rebel this upbringing?");
+        return Menu.yes_no();
+    }
+
+    private void disciplineMenu(String[] disciplines){
+        System.out.print("Choose discipline from the following:\n");
+        System.out.printf("1. %s\n", disciplines[0]);
+        System.out.printf("2. %s\n", disciplines[1]);
+        System.out.printf("3. %s\n", disciplines[2]);
+    }
 
     public void upbringing(){
         int roll = Dice.D20();
 
         if(this.species == Species.KLINGON){
             if(roll < 4){
-                System.out.println("Warrior Caste");
-                //TODO: player chooses to accept or rebel
-                //TODO: accept = daring +2, fitness +1
-                //TODO: rebel = reason +2, insight +1
-                //TODO: player chooses, command, conn, or security +1
-                //TODO: add focus from militaristic types
+                System.out.println("You belong to the Warrior Caste");
+                if(acceptRebel() == 'Y'){
+                    this.daring += 2;
+                    this.fitness++;
+                }else{
+                    this.reason += 2;
+                    this.insight++;
+                }
+
+                disciplineMenu(new String[]{"Command", "Conn", "Security"});
+                switch(Menu.choose(3)){
+                    case 1:
+                        this.command++;
+                        break;
+                    case 2:
+                        this.conn++;
+                        break;
+                    case 3:
+                        this.security++;
+
+                }
+                //TODO: get this to work for SpeciesList above
+                //TODO: find way to select only military types
+                //TODO: use this for the rest of the focus menus
+                //TODO: also you are missing lots of focus lists
+                Menu.D20Listing(FocusCommand.values());
+
             } else if (roll < 8) {
                 System.out.println("Merchant Caste");
                 //TODO: accept = daring +1, presence +2

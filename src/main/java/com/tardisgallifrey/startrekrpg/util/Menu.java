@@ -1,5 +1,11 @@
 package com.tardisgallifrey.startrekrpg.util;
 
+import com.tardisgallifrey.startrekrpg.enums.D20Enum;
+import com.tardisgallifrey.startrekrpg.enums.Era;
+import com.tardisgallifrey.startrekrpg.enums.Species;
+
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Menu {
@@ -48,5 +54,22 @@ public class Menu {
         }
 
         return choice;
+    }
+
+    public static void D20Listing(Enum[] d20list) {
+        int columns = 1;
+
+        for (Enum item : d20list) {
+            System.out.printf("%d - %-25.25s", columns, item);
+            columns++;  //increment columns
+
+            //If the column number is odd, add a
+            //print return
+            if (columns % 2 != 0) {
+                System.out.println(); //blank println = '\n'
+            }
+
+        }
+        System.out.println();
     }
 }

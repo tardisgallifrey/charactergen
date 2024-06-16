@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum Values {
+public enum Values implements D20Enum{
 
     MYSTERY("A good mystery is irrestible."),
     CONFIDENCE("Act with confidence, even if you don't feel it."),
@@ -28,5 +28,10 @@ public enum Values {
     Values(String label) {
 
         this.label = label;
+    }
+
+    @Override
+    public String getLabel() {
+        return this.label;
     }
 }

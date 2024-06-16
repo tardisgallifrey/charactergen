@@ -1,6 +1,6 @@
 package com.tardisgallifrey.startrekrpg.enums;
 
-public enum CareerEvents {
+public enum CareerEvents implements D20Enum{
 
     SHIP_DESTROYED("Ship destroyed"),
     DEATH_OF_FRIEND("Death of a friend"),
@@ -30,6 +30,8 @@ public enum CareerEvents {
     }
 
 
-
-
+    @Override
+    public String getLabel() {
+        return this.label;
+    }
 }
