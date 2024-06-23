@@ -269,7 +269,6 @@ public class Character {
             //earlier and others that apply.
             for(Species species : Species.values()){
 
-                //TODO see note above in generate about species lists
                 if(species.getEra().equals(this.era) ||
                     species.getEra().equals(Era.ALL))
                 {
