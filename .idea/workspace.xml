@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="add D20Enum and d20listing 6/15/24">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/FocusConn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/FocusSecurity.java" afterDir="false" />
+    <list default="true" id="2b208c99-a04c-4865-a518-99f799c7269b" name="Changes" comment="some missing focus enums 6/23/24">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/enums/FocusEngineering.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tardisgallifrey/startrekrpg/Character.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718570699067</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="some missing focus enums 6/23/24">
+      <option name="closed" value="true" />
+      <created>1719168585135</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1719168585135</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -384,6 +390,7 @@
     <MESSAGE value="still doing topical framework 6/8/24" />
     <MESSAGE value="final TODO framework 6/16/24" />
     <MESSAGE value="add D20Enum and d20listing 6/15/24" />
-    <option name="LAST_COMMIT_MESSAGE" value="add D20Enum and d20listing 6/15/24" />
+    <MESSAGE value="some missing focus enums 6/23/24" />
+    <option name="LAST_COMMIT_MESSAGE" value="some missing focus enums 6/23/24" />
   </component>
 </project>
