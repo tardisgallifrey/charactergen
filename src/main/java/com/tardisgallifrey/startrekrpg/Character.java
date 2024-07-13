@@ -581,15 +581,8 @@ public class Character {
     }
 
     private char acceptRebel(){
-        System.out.println("Do you accept or rebel this upbringing?");
+        System.out.println("Do you accept(Y) or rebel(N) this upbringing?");
         return Menu.yes_no();
-    }
-
-    private void disciplineMenu(String[] disciplines){
-        System.out.print("Choose discipline from the following:\n");
-        System.out.printf("1. %s\n", disciplines[0]);
-        System.out.printf("2. %s\n", disciplines[1]);
-        System.out.printf("3. %s\n", disciplines[2]);
     }
 
     public void upbringing(){
@@ -598,7 +591,8 @@ public class Character {
         if(this.species == Species.KLINGON){
             if(roll < 4){
                 System.out.println("You belong to the Warrior Caste");
-                if(acceptRebel() == 'Y'){
+
+                if(this.acceptRebel() == 'Y'){
                     this.daring += 2;
                     this.fitness++;
                 }else{
@@ -606,7 +600,7 @@ public class Character {
                     this.insight++;
                 }
 
-                disciplineMenu(new String[]{"Command", "Conn", "Security"});
+                Menu.disciplineMenu(new String[]{"Command", "Conn", "Security"});
                 switch(Menu.choose(3)){
                     case 1:
                         this.command++;
@@ -621,78 +615,314 @@ public class Character {
                 //TODO: get this to work for SpeciesList above
                 //TODO: find way to select only military types
                 //TODO: use this for the rest of the focus menus
-                //TODO: also you are missing lots of focus lists
                 Menu.D20Listing(FocusCommand.values());
 
             } else if (roll < 8) {
                 System.out.println("Merchant Caste");
-                //TODO: accept = daring +1, presence +2
-                //TODO: rebel = reason +1, insight +2
-                //TODO: command, engineering, or science +1
-                //TODO: add a focus from merchant type focuses
+
+                if(this.acceptRebel() == 'Y'){
+                    this.fitness += 2;
+                    this.daring ++;
+                }else{
+                    this.insight += 2;
+                    this.reason ++;
+                }
+
+                Menu.disciplineMenu(new String[]{"Command", "Engineering", "Science"});
+                switch(Menu.choose(3)){
+                    case 1:
+                        this.command++;
+                        break;
+                    case 2:
+                        this.engineering++;
+                        break;
+                    case 3:
+                        this.science++;
+
+                }
+                //TODO: add merchant type focus
+
             } else if (roll < 13) {
                 System.out.println("Agriculture Caste");
-                //TODO: accept = control +1, fitness +2
-                //TODO: rebel = presence +1, reason +2
-                //TODO: conn, security, or Medicine +1
-                //TODO: add focus from science types or ops types like ag
+
+                if(this.acceptRebel() == 'Y'){
+                    this.fitness += 2;
+                    this.control++;
+                }else{
+                    this.reason += 2;
+                    this.presence++;
+                }
+
+                Menu.disciplineMenu(new String[]{"Conn", "Security", "Medicine"});
+                switch(Menu.choose(3)){
+                    case 1:
+                        this.conn++;
+                        break;
+                    case 2:
+                        this.security++;
+                        break;
+                    case 3:
+                        this.medicine++;
+
+                }
+                //TODO: add science or ops type focus
             } else if (roll < 15) {
                 System.out.println("Scientific Caste");
-                //TODO: accept = control + 2, reason +1
-                //TODO: rebel = daring +1, insight +2
-                //TODO: engineering, science, or medicine +1
+
+                if(this.acceptRebel() == 'Y'){
+                    this.control += 2;
+                    this.reason++;
+                }else{
+                    this.insight += 2;
+                    this.daring++;
+                }
+
+                Menu.disciplineMenu(new String[]{"Engineering", "Science", "Medicine"});
+                switch(Menu.choose(3)){
+                    case 1:
+                        this.engineering++;
+                        break;
+                    case 2:
+                        this.science++;
+                        break;
+                    case 3:
+                        this.medicine++;
+
+                }
                 //TODO: focus from types related to engineering or science
             } else if (roll < 18) {
                 System.out.println("Artistic Caste");
-                //TODO: accept = insight +1, presence +2
-                //TODO: rebel = daring +1, fitness +2
-                //TODO: command, engineering or science +1
+
+                if(this.acceptRebel() == 'Y'){
+                    this.presence += 2;
+                    this.insight++;
+                }else{
+                    this.fitness += 2;
+                    this.daring++;
+                }
+
+                Menu.disciplineMenu(new String[]{"Command", "Engineering", "Science"});
+                switch(Menu.choose(3)){
+                    case 1:
+                        this.command++;
+                        break;
+                    case 2:
+                        this.engineering++;
+                        break;
+                    case 3:
+                        this.science++;
+
+                }
                 //TODO: focus from softer skills, sciences
             } else {
                 System.out.println("Academic Caste");
-                //TODO: accept = control +1, reason +2
-                //TODO: rebel = fitness +1, insight +2
-                //TODO: command, security or science +1
+
+                if(this.acceptRebel() == 'Y'){
+                    this.reason += 2;
+                    this.control++;
+                }else{
+                    this.insight += 2;
+                    this.fitness++;
+                }
+
+                Menu.disciplineMenu(new String[]{"Command", "Security", "Science"});
+                switch(Menu.choose(3)){
+                    case 1:
+                        this.command++;
+                        break;
+                    case 2:
+                        this.security++;
+                        break;
+                    case 3:
+                        this.science++;
+
+                }
                 //TODO: focus from sciences, government, political
             }
 
         }else{
+            roll = Dice.D6();
+
             System.out.println("Your upbringing will go by upbringing");
-            //TODO: Business or Trade, accept = daring +1, presence +2
-            //TODO: rebel = insight +2, reason +1
-            //TODO: increase command, engineering, or science by 1
-            //TODO: add focus from finance, geology, linguistics,
-            //TODO: manufacturing, metallurgy, negotiation, survey
 
-            //TODO: Agricultural or rural
-            //TODO: accept = control +1, fitness +2
-            //TODO: rebel = presence +1, reason +2
-            //TODO: increase conn, security, medicine by 1
-            //TODO: focus from  animal handling, athletics, emergency medicine
-            //TODO: endurance, ground vehicles, infectious diseases, navigation
-            //TODO: survival training, toxicology
+            switch(roll){
+                case 1:
+                    System.out.println("Starfleet");
 
-            //TODO: Science and Technology
-            //TODO: accept = control +2, reason +1
-            //TODO: rebel = daring +1, insight +2
-            //TODO: conn, engineering, science or medicine
-            //TODO: focuses from astronavigation, astrophysics, computers,
-            //TODO: cybernetics, genetics, physics, power systems, quantum mechanics
-            //TODO: subspace comms, surgery, warp field dynamics, xenobiology
+                    if(this.acceptRebel() == 'Y'){
+                        this.control += 2;
+                        this.fitness++;
+                    }else{
+                        this.daring += 2;
+                        this.insight++;
+                    }
 
-            //TODO: artistic and creative
-            //TODO: accept = insight +1, presence +2
-            //TODO: rebel = daring +1, fitness +1
-            //TODO: command, engineering, or science
-            //TODO: focus from botany, cultural studies, holoprogramming
-            //TODO: linguistics, music, observation, persuasion, psychology
+                    Menu.disciplineMenu(new String[]{"Command", "Conn", "Engineering", "Security", "Science", "Medicine"});
+                    switch(Menu.choose(6)){
+                        case 1:
+                            this.command++;
+                            break;
+                        case 2:
+                            this.conn++;
+                            break;
+                        case 3:
+                            this.engineering++;
+                            break;
+                        case 4:
+                            this.security++;
+                            break;
+                        case 5:
+                            this.science++;
+                            break;
+                        case 6:
+                            this.medicine++;
 
-            //TODO: diplomacy and politics
-            //TODO: accept = control +1, presence +2
-            //TODO: rebel = fitness +1, reason +2
-            //TODO: command, conn, or security
-            //TODO: composure, debate, diplomacy, espionage,
-            //TODO: interrogation, law, philosophy, starfleet protocol
+                    //TODO: Focuses
+                            //TODO: Astronav, Composure, EVA, Hand to hand,
+                            //TODO: Hand phasers, history, Small craft,
+                            //TODO: starfleet protocol, starship recognition
+                    }
+                case 2:
+                    System.out.println("Business or Trade");
+
+                    if(this.acceptRebel() == 'Y'){
+                        this.presence += 2;
+                        this.daring++;
+                    }else{
+                        this.insight += 2;
+                        this.reason++;
+                    }
+
+                    Menu.disciplineMenu(new String[]{"Command", "Engineering", "Science"});
+                    switch(Menu.choose(3)){
+                        case 1:
+                            this.command++;
+                            break;
+                        case 2:
+                            this.engineering++;
+                            break;
+                        case 3:
+                            this.science++;
+
+                    }
+                    //TODO: add focus from finance, geology, linguistics,
+                    //TODO: manufacturing, metallurgy, negotiation, survey
+                    break;
+                case 3:
+
+                    System.out.println("Agricultural or rural");
+
+                    if(this.acceptRebel() == 'Y'){
+                        this.fitness += 2;
+                        this.control++;
+                    }else{
+                        this.reason += 2;
+                        this.presence++;
+                    }
+
+                    Menu.disciplineMenu(new String[]{"Conn", "Security", "Medicine"});
+                    switch(Menu.choose(3)){
+                        case 1:
+                            this.conn++;
+                            break;
+                        case 2:
+                            this.security++;
+                            break;
+                        case 3:
+                            this.medicine++;
+
+                    }
+                    break;
+                //TODO: focus from  animal handling, athletics, emergency medicine
+                //TODO: endurance, ground vehicles, infectious diseases, navigation
+                //TODO: survival training, toxicology
+                case 4:
+
+                    System.out.println("Science or Technology");
+
+                    if(this.acceptRebel() == 'Y'){
+                        this.control += 2;
+                        this.reason++;
+                    }else{
+                        this.insight += 2;
+                        this.daring++;
+                    }
+
+                    Menu.disciplineMenu(new String[]{"Conn", "Engineering", "Science", "Medicine"});
+                    switch(Menu.choose(4)){
+                        case 1:
+                            this.conn++;
+                            break;
+                        case 2:
+                            this.engineering++;
+                            break;
+                        case 3:
+                            this.science++;
+                            break;
+                        case 4:
+                            this.medicine++;
+
+                    }
+                    break;
+                    //TODO: focuses from astronavigation, astrophysics, computers,
+                //TODO: cybernetics, genetics, physics, power systems, quantum mechanics
+                //TODO: subspace comms, surgery, warp field dynamics, xenobiology
+                case 5:
+
+                    System.out.println("Artistic and Creative");
+
+                    if(this.acceptRebel() == 'Y'){
+                        this.presence += 2;
+                        this.insight++;
+                    }else{
+                        this.daring++;
+                        this.fitness++;
+                    }
+
+                    Menu.disciplineMenu(new String[]{"Command", "Engineering", "Science"});
+                    switch(Menu.choose(3)){
+                        case 1:
+                            this.command++;
+                            break;
+                        case 2:
+                            this.engineering++;
+                            break;
+                        case 3:
+                            this.science++;
+
+                    }
+                    break;
+                //TODO: focus from botany, cultural studies, holoprogramming
+                //TODO: linguistics, music, observation, persuasion, psychology
+                case 6:
+
+                    System.out.println("Diplomacy and Politics");
+
+                    if(this.acceptRebel() == 'Y'){
+                        this.presence += 2;
+                        this.control++;
+                    }else{
+                        this.reason += 2;
+                        this.fitness++;
+                    }
+
+                    Menu.disciplineMenu(new String[]{"Command", "Conn", "Security"});
+                    switch(Menu.choose(3)){
+                        case 1:
+                            this.command++;
+                            break;
+                        case 2:
+                            this.conn++;
+                            break;
+                        case 3:
+                            this.security++;
+
+                    }
+                    break;
+                //TODO: composure, debate, diplomacy, espionage,
+                //TODO: interrogation, law, philosophy, starfleet protocol
+
+            }
 
         }
     }
@@ -916,8 +1146,6 @@ public class Character {
         int roll2;
         String event1 = "";
         String event2 = "";
-
-
 
         while( (roll1 = Dice.D20()) != (roll2 = Dice.D20())) {
             event1 = event_selection(roll1);

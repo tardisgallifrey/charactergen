@@ -34,7 +34,7 @@ public class StarTrekCharacterGen {
 
         int choice = Menu.yes_no();
 
-        if(choice == 'Y' || choice == 'y'){
+        if(choice == 'Y'){
             player.setEra(true);
             player.setSpecies(true);
         }else{

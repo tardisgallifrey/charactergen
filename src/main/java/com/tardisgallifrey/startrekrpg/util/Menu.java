@@ -37,23 +37,23 @@ public class Menu {
     }
 
 
-    public static char yes_no(){
+    public static char yes_no() {
         System.out.print("Enter Y or N --> ");
 
         Scanner input = new Scanner(System.in);
-        char choice;
+        char choice = ' ';
 
         //recommended method is to check
         //and see if Scanner has what you want(i.e. no malfunctions)
         //or to use try/catch.  I prefer this method.
-        if(input.hasNext()) {
+        if (input.hasNext()) {
             choice = input.next().charAt(0);
-        }else{
-            choice = 'N';
-            System.out.println("Something went wrong.");
         }
-
-        return choice;
+        if (choice == 'Y' || choice == 'y') {
+            return 'Y';
+        } else {
+            return 'N';
+        }
     }
 
     public static void D20Listing(Enum[] d20list) {
@@ -71,5 +71,12 @@ public class Menu {
 
         }
         System.out.println();
+    }
+
+    public static void disciplineMenu(String[] disciplines){
+        System.out.print("Choose discipline from the following:\n");
+        System.out.printf("1. %s\n", disciplines[0]);
+        System.out.printf("2. %s\n", disciplines[1]);
+        System.out.printf("3. %s\n", disciplines[2]);
     }
 }
