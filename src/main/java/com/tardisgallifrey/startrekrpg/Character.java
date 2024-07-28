@@ -4,7 +4,10 @@ import com.tardisgallifrey.startrekrpg.enums.*;
 import com.tardisgallifrey.startrekrpg.util.Dice;
 import com.tardisgallifrey.startrekrpg.util.Environment;
 import com.tardisgallifrey.startrekrpg.util.Menu;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /*This is the character class for the Star Trek Adventures
 * solo role playing game.
@@ -33,6 +36,8 @@ public class Character {
     int security;
     int science;
     int medicine;
+
+    ArrayList<String> focusList = new ArrayList<>();
 
 
     public Character(int control,
@@ -338,6 +343,8 @@ public class Character {
     public void showCharacter(){
         //May look dumb, but using printf for each
         //line gives me more control, IMO
+        System.out.println();
+        System.out.println();
         System.out.println("Character stats.");
         System.out.printf("Your Star Trek Era: %s%n", this.era.getLabel());
         System.out.printf("Your species is: %s%n", this.species.getLabel());
@@ -353,6 +360,7 @@ public class Character {
         System.out.printf("%6d  %8d  %7d%n", this.getCommand(), this.getConn(), this.getSecurity());
         System.out.printf("%s  %s  %s%n", "Engineering", "Science", "Medicine");
         System.out.printf("%6d  %8d  %7d%n", this.getEngineering(), this.getScience(), this.getMedicine());
+        System.out.println("Focus List: "+this.focusList.toString());
 
 
     }
@@ -584,7 +592,11 @@ public class Character {
     }
 
     public void upbringing(){
-        int roll = Dice.D20();
+        //int roll = Dice.D20();
+        int roll = 3;
+        int choice = 1;
+        int selection = 0;
+        HashMap<Integer, String> listFocus = new HashMap<>();
 
         if(this.species == Species.KLINGON){
             if(roll < 4){
@@ -602,18 +614,54 @@ public class Character {
                 switch(Menu.choose(3)){
                     case 1:
                         this.command++;
+                        System.out.println();
+                        System.out.println("Choose a focus from these: ");
+
+                        for(FocusCommand focus : FocusCommand.values()){
+                            if(focus.getType() == 1){
+                                listFocus.put(choice, focus.getLabel());
+                                System.out.println(choice+". "+focus.getLabel());
+                                choice++;
+                            }
+                        }
+
+                        selection = Menu.choose(choice);
+
+                        for(FocusCommand focus : FocusCommand.values()){
+                            if(focus.getLabel().equals(listFocus.get(selection))){
+                                System.out.println("You chose "+focus.getLabel());
+                                this.focusList.add(focus.getLabel());
+                            }
+                        }
                         break;
                     case 2:
                         this.conn++;
+                        System.out.println();
+                        System.out.println("Choose a focus from these: ");
+
+                        for(FocusConn focus : FocusConn.values()){
+                            if(focus.getType() == 1){
+                                listFocus.put(choice, focus.getLabel());
+                                System.out.println(choice+". "+focus.getLabel());
+                                choice++;
+                            }
+                        }
+
+                        selection = Menu.choose(choice);
+
+                        for(FocusConn focus : FocusConn.values()){
+                            if(focus.getLabel().equals(listFocus.get(selection))){
+                                System.out.println("You chose "+focus.getLabel());
+                                this.focusList.add(focus.getLabel());
+                            }
+                        }
                         break;
                     case 3:
                         this.security++;
 
                 }
-                //TODO: get this to work for SpeciesList above
-                //TODO: find way to select only military types
                 //TODO: use this for the rest of the focus menus
-                Menu.D20Listing(FocusCommand.values());
+
 
             } else if (roll < 8) {
                 System.out.println("Merchant Caste");
