@@ -1,11 +1,5 @@
 package com.tardisgallifrey.startrekrpg.util;
 
-import com.tardisgallifrey.startrekrpg.enums.D20Enum;
-import com.tardisgallifrey.startrekrpg.enums.Era;
-import com.tardisgallifrey.startrekrpg.enums.Species;
-
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Menu {
@@ -49,11 +43,7 @@ public class Menu {
         if (input.hasNext()) {
             choice = input.next().charAt(0);
         }
-        if (choice == 'Y' || choice == 'y') {
-            return 'Y';
-        } else {
-            return 'N';
-        }
+        return choice;
     }
 
     public static void D20Listing(Enum[] d20list) {
@@ -73,10 +63,13 @@ public class Menu {
         System.out.println();
     }
 
-    public static void disciplineMenu(String[] disciplines){
+    public static void disciplineMenu(String[] disciplines) {
         System.out.print("Choose discipline from the following:\n");
         System.out.printf("1. %s\n", disciplines[0]);
         System.out.printf("2. %s\n", disciplines[1]);
         System.out.printf("3. %s\n", disciplines[2]);
+        if (disciplines.length > 3) {
+            System.out.printf("4. %s\n", disciplines[3]);
+        }
     }
 }

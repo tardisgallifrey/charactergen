@@ -4,8 +4,6 @@ import com.tardisgallifrey.startrekrpg.enums.*;
 import com.tardisgallifrey.startrekrpg.util.Dice;
 import com.tardisgallifrey.startrekrpg.util.Environment;
 import com.tardisgallifrey.startrekrpg.util.Menu;
-
-import java.util.Arrays;
 import java.util.HashMap;
 
 /*This is the character class for the Star Trek Adventures

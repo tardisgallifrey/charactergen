@@ -45,11 +45,11 @@ public class StarTrekCharacterGen {
         player.species_bonus();
         player.environment_bonus();
         player.upbringing();
-        player.education();
-        player.career_length();
-        player.career_events();
-        player.final_touches();
-        player.assignment();
+        //player.education();
+        //player.career_length();
+        //player.career_events();
+        //player.final_touches();
+        //player.assignment();
         player.showCharacter();
 
             //        End of main function
